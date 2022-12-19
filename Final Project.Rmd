@@ -2,8 +2,8 @@
 title: "Final Project"
 author: "Jessica Petrochuk"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r, include=FALSE, warning=FALSE}
@@ -21,7 +21,7 @@ library(jsonlite)
 library(tidyverse)
 library(randomForest)
 
-# Set seed for reproducability
+# Set seed for reproducibility
 set.seed(1213)
 
 # Load previously preprocessed data
@@ -288,7 +288,7 @@ kable(gbmimp$importance, caption="Variables of Importance")
 
 ```
 
-```{r, eval = FALSE}
+```{r, eval = FALSE, echo=FALSE,}
 y_hat_gbm = as.integer(predict(train_gbm, x_test))
 postResample(y_hat_gbm, y_test)
 ```
@@ -319,13 +319,7 @@ On one hand, both the regression and the machine learning model resulted in low 
 
 iCite, Hutchins BI, Santangelo G. iCite Database Snapshots (NIH Open Citation Collection) [Internet]. figshare; 2019. doi: 10.35092/yhjc.c.4586573.
 
+
 # Appendix (does not count towards page limit, 5 pts)
 ```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
 ```
-
-
-# GitHub webpage (10 pts)
-- See: https://pages.github.com/ and free templates here https://jekyllthemes.io/free 
-- Display key points from Intro, Results, Conclusion, and References
-- Include key figures/tables
-- Can use same text as your report
